@@ -1,7 +1,11 @@
 :root {
   --arrow-padding: none;
   --display-text: none;
+  --display-start: none;
+  --display-end: block;
   --svg-text: aliceblue;
+  --start: 0px;
+  --end: 95px;
 }
 
 * {
@@ -10,28 +14,33 @@
 }
 
 nav {
-  width: 95px;
+  width: var(--end);
   height: 100vh;
   padding-top: 10px;
   background-color: rgb(212, 187, 40);
   position: fixed;
   text-align: center;
+  animation: out-navbar 300ms;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  /* transition: width 1s ease; */
 }
 
 nav:hover {
   --arrow-padding: 30px;
   text-align: right;
-  animation-name: toggle-navbar;
-  animation-duration: 300ms;
+  width: 400px;
+  animation: in-navbar 300ms;
   animation-fill-mode: forwards;
+  animation-direction: alternate;
+  /* --display-text: inline-block; */
 }
 
-nav:hover .arrow-container {
-}
-
-.svg {
-  width: 65px;
-  height: 65px;
+nav:hover .arrow {
+  transform: rotate(540deg);
+  /* animation-name: rotate-object; */
+  /* animation-duration: 700ms;+
+  ; */
 }
 
 .arrow-container {
@@ -50,6 +59,8 @@ nav:hover .arrow-container {
 .arrow {
   fill: rgb(245, 225, 203);
   margin: 0 15px;
+  transform: rotate(0deg);
+  transition: transform 700ms;
 }
 
 .navbar-nav {
@@ -83,7 +94,7 @@ nav:hover .arrow-container {
 }
 
 .nav-text {
-  display: var(--display-text);
+  display: none;
   margin: auto;
   text-align: center;
   color: var(--svg-text);
@@ -95,33 +106,26 @@ nav:hover .arrow-container {
   --svg-text: rgb(212, 187, 40);
 }
 
-.menu-container {
-  width: 30px;
-  padding: 30px 50px;
-  margin-left: auto;
-}
-
-.chakra {
-  animation: rotate-chakra infinite 7s linear;
-  fill: rgb(212, 187, 40);
-}
-
-@keyframes rotate-chakra {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes toggle-navbar {
+@keyframes in-navbar {
   0% {
     width: 95px;
-    display: none;
+    --display-text: none;
   }
   100% {
     width: 400px;
     --display-text: block;
+    transition: width 1s ease;
+  }
+}
+
+@keyframes out-navbar {
+  0% {
+    width: var(--start);
+    --display-text: var(--display-start);
+  }
+  100% {
+    width: var(--end);
+    --display-text: var(--display-end);
+    /* transition: width 1s ease; */
   }
 }
