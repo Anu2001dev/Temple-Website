@@ -19,21 +19,22 @@ class Navitem extends Component {
 }
 
 class Navbar extends Component {
-  state = {};
   render() {
     return (
-      <ul>
-        <Navitem>
-          <div className="title-container">
-            <span className="title">Kithulgoda Aranya</span>
-            <Chakra />
-          </div>
-        </Navitem>
-        <Navitem text="Home" />
-        <Navitem text="Gallery" />
-        <Navitem text="News" />
-        <Navitem text="Contacts" />
-      </ul>
+      <nav>
+        <ul>
+          <Navitem>
+            <div className="title-container">
+              <span className="title">Kithulgoda Aranya</span>
+              <Chakra className="logo" />
+            </div>
+          </Navitem>
+          <Navitem text="Home" />
+          <Navitem text="Gallery" />
+          <Navitem text="News" />
+          <Navitem text="Contacts" />
+        </ul>
+      </nav>
     );
   }
 }

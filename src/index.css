@@ -8,6 +8,16 @@
   --nav-color: rgb(254, 255, 255);
 }
 
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  overflow: auto;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -24,10 +34,28 @@ code {
     monospace;
 }
 
+
+#root {
+  height: 100vh;
+}
+
 nav {
   padding: 20px;
   padding-right: 50px;
   /* width: 100vw; */
+}
+
+a {
+  cursor: pointer;
+}
+
+
+svg.logo {
+  width: 60px;
+  height: 60px;
+  fill: rgb(90, 142, 219);
+  padding: 0 20px;
+  animation: rotate 20s infinite linear;
 }
 
 ul {
@@ -48,6 +76,11 @@ li.nav-item:first-child {
   margin-right: auto;
 }
 
+a.nav-link {
+  text-decoration: none;
+  color: black;
+}
+
 div.title-container {
   display: flex;
   align-items: center;
@@ -62,17 +95,99 @@ span.title {
 span.nav-text {
   padding: 0 10px;
   color: #686868;
+  padding: 0 2vw;
   /* font-size: 90px; */
 }
 
-svg {
-  width: 60px;
-  height: 60px;
-  fill: #DBCE5A;
-  padding: 0 20px;
+main {
+  /* position: fixed; */
 }
 
-a.nav-link {
+
+.quote-anime-container {
+  width: 830px;
+  height: 470px;
+  border: 2px;
+  align-self: center;
+  margin: 50px auto 150px auto;
+
+}
+
+.anime {
+  /* margin: 0 auto; */
+  padding-left: 23px;
+}
+
+.quote-container {
+  padding-top: 50px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+span.quote {
+  font-family: parisienne;
+  font-size: 50px;
+}
+
+span.quote-teller {
+  padding: 0 110px;
+  /* padding-bottom: 50px; */
+  font-family: Montserrat;
+  font-size: 20px;
+  color: #BEB13A;
+  /* margin-right: auto; */
+
+  /* font-family: Helvetica, sans-serif; */
+}
+
+.gallery-button-container {
+  padding-top: 50px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.gallery-button {
+  width: 300px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
   text-decoration: none;
-  color: black;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 19px;
+  background-color: #BEB13A;
+  margin-bottom: 50px;
+  /* box-sizing: none; */
+}
+
+footer {
+  background: rgb(92, 90, 88);
+  color: rgb(247, 236, 216);
+  /* margin-top: 50px; */
+  /* position: relative; */
+  height: 15vh;
+}
+
+@keyframes rotate {
+  from {
+    transfrom: rotate(0deg);
+  }
+
+  25% {
+    fill: #DBCE5A;
+  }
+
+  50% {
+    fill: #b34a4a;
+  }
+
+  75% {
+    fill: orange;
+  }
+
+
+  to {
+    transform: rotate(720deg);
+    fill: rgb(90, 142, 219);
+  }
 }
