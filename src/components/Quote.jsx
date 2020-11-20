@@ -1,17 +1,17 @@
 import React from "react";
 
-import { ReactComponent as Anime } from "../svgs/eyes.svg";
+import EyeSVG from "../svgs/eyes.svg";
 
 const Quote = () => {
   return (
     <div className="quote-anime-container">
-      <Anime className="anime" />
+      <img src={EyeSVG} alt="two eys" className="anime" />
       <div className="quote-container">
         <span className="quote">
           “look through the eyes of Dhamma, enlightment itself will come to you”
         </span>
       </div>
-      <span className="quote-teller">-Lord Buddha</span>
+      <span className="quote-teller"> -- Lord Buddha -- </span>
       <div className="gallery-button-container">
         <a href="/">
           <button type="submit" className="gallery-button">
