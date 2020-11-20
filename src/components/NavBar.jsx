@@ -12,8 +12,8 @@ const NavBar = () => {
         </div>
       </NavItem>
       <NavItem text="Gallery" />
-      <NavItem text="News" />
-      <NavItem text="Contacts" />
+      <NavItem text="Events" />
+      <NavItem text="Contact Us" />
     </nav>
   );
 };

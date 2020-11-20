@@ -1,0 +1,49 @@
+nav.nav-bar {
+  padding: 30px 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+}
+
+svg.logo {
+  width: 60px;
+  height: 60px;
+  fill: rgb(90, 142, 219);
+  padding: 0 20px;
+  animation: rotate 20s infinite linear;
+}
+
+li.nav-item {
+  list-style: none;
+  &:first-child {
+    margin-right: auto;
+  }
+}
+
+a.nav-link {
+  text-decoration: none;
+}
+
+div.title-container {
+  display: flex;
+  align-items: center;
+}
+
+span.title {
+  font-size: 22px;
+  font-family: Montserrat;
+  color: black;
+}
+
+span.nav-text {
+  padding: 0 10px;
+  color: #494949;
+  padding: 0 2vw;
+  font-weight: 600;
+  font-size: large;
+  &:hover {
+    color: #030303;
+    font-size: x-large;
+  }
+}
