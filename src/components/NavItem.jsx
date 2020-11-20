@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 class NavItem extends Component {
-  contentortext() {
+  contentOrText() {
     const { text, children } = this.props;
     return text ? <span className="nav-text">{text}</span> : children;
   }

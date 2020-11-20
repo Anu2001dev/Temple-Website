@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./App.scss";
+import "./scss/App.scss";
 import * as serviceWorker from "./serviceWorker";
 import App from "./components/App";
 // import TopBar from "./components/topbar";

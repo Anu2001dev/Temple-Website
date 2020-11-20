@@ -1,6 +1,7 @@
+$display-txt: none;
+$icon-align: center;
+
 :root {
-  --display-txt: none;
-  --icon-align: center;
   --arrow-align: center;
   --icon-padding: 17px 0;
   --arrow-paddding: 0;
@@ -34,7 +35,6 @@ code {
     monospace;
 }
 
-
 #root {
   height: 100vh;
 }
@@ -48,7 +48,6 @@ nav {
 a {
   cursor: pointer;
 }
-
 
 svg.logo {
   width: 60px;
@@ -103,14 +102,12 @@ main {
   /* position: fixed; */
 }
 
-
 .quote-anime-container {
   width: 830px;
   height: 470px;
   border: 2px;
   align-self: center;
   margin: 50px auto 150px auto;
-
 }
 
 .anime {
@@ -134,7 +131,7 @@ span.quote-teller {
   /* padding-bottom: 50px; */
   font-family: Montserrat;
   font-size: 20px;
-  color: #BEB13A;
+  color: #beb13a;
   /* margin-right: auto; */
 
   /* font-family: Helvetica, sans-serif; */
@@ -153,9 +150,9 @@ span.quote-teller {
   border: none;
   border-radius: 5px;
   text-decoration: none;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 19px;
-  background-color: #BEB13A;
+  background-color: #beb13a;
   margin-bottom: 50px;
   /* box-sizing: none; */
 }
@@ -174,7 +171,7 @@ footer {
   }
 
   25% {
-    fill: #DBCE5A;
+    fill: #dbce5a;
   }
 
   50% {
@@ -185,12 +182,11 @@ footer {
     fill: orange;
   }
 
-
   to {
     transform: rotate(720deg);
     fill: rgb(90, 142, 219);
   }
 }
 
-@import "./navbar.scss";
-@import "./topbar.scss"
+// @import "./navbar.scss";
+@import "./topbar.scss";
