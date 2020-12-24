@@ -4,7 +4,6 @@ import "./scss/App.scss";
 import * as serviceWorker from "./serviceWorker";
 import App from "./components/App";
 // import TopBar from "./components/topbar";
-// import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 

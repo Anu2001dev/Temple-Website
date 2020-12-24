@@ -6,8 +6,8 @@ const Quote = () => {
   return (
     <div className="quote-anime-container">
       <img src={EyeSVG} alt="two eys" className="anime" />
-      <div className="quote-container">
-        <span className="quote">
+      <div>
+        <span>
           “look through the eyes of Dhamma, enlightment itself will come to you”
         </span>
       </div>
