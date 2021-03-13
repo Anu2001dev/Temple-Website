@@ -1,30 +1,28 @@
-import React, { Component } from "react";
 import PropTypes from "prop-types";
+import React from "react";
+import { Link } from "react-router-dom";
 
-class NavItem extends Component {
-  contentOrText() {
-    const { text, children } = this.props;
-    return text ? <span className="nav-text">{text}</span> : children;
-  }
+const NavItem = ({ text, children, to }) => {
+  const content = text ? <span className="nav-text">{text}</span> : children;
 
-  render() {
-    return (
-      <li className="nav-item">
-        <a href="/" className="nav-link">
-          {this.contentOrText()}
-        </a>
-      </li>
-    );
-  }
-}
+  return (
+    <li className="nav-item">
+      <Link to={to} className="nav-link">
+        {content}
+      </Link>
+    </li>
+  );
+};
 
 NavItem.defaultProps = {
   text: "",
   children: null,
+  to: "/",
 };
 
 NavItem.propTypes = {
   text: PropTypes.string,
+  to: PropTypes.string,
   children: PropTypes.element,
 };
 

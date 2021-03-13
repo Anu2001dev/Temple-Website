@@ -1,6 +1,6 @@
 import React from "react";
-import NavItem from "./NavItem";
 import { ReactComponent as Chakra } from "../svgs/chakra.svg";
+import NavItem from "./NavItem";
 
 const NavBar = () => {
   return (
@@ -11,9 +11,10 @@ const NavBar = () => {
           <Chakra className="logo" />
         </div>
       </NavItem>
-      <NavItem text="Gallery" />
-      <NavItem text="Events" />
-      <NavItem text="Contact Us" />
+      <NavItem text="About" to="/about" />
+      <NavItem text="Gallery" to="/gallery" />
+      <NavItem text="Events" to="/events" />
+      <NavItem text="Contact Us" to="/contacts" />
     </nav>
   );
 };
